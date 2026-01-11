@@ -12,4 +12,14 @@
     <PackageReference Include="ModelContextProtocol" Version="0.5.0-preview.1" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)'==''">Release</Configuration>
+    <SelfContained>true</SelfContained>
+    <PublishDir>$(MSBuildProjectDirectory)\publish\</PublishDir>
+    <PublishSingleFile>true</PublishSingleFile>
+    <PublishTrimmed>false</PublishTrimmed>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
 </Project>

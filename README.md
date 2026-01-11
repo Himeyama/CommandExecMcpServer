@@ -34,8 +34,14 @@ dotnet restore
 ```
 
 ## ビルド
+### Windows
+```ps1
+dotnet publish CommandExecMcpServer.csproj -r win-x64 -o .\publish\win
+```
+
+### Linux
 ```bash
-dotnet build
+dotnet publish CommandExecMcpServer.csproj -r linux-x64 -o .\publish\linux
 ```
 
 ## 実行
@@ -62,7 +68,12 @@ MCP クライアントから以下のように `exec` ツールを呼び出せ�
 {"jsonrpc": "2.0", "id": "2", "method": "tools/list"}
 ```
 
-## ツール実行例
+## ツール実行例 (Windows で Get-ChildItem)
 ```json
 {"jsonrpc":"2.0","id":"3","method":"tools/call","params":{"name":"exec","arguments":{"command":"Get-ChildItem", "args": "."}}}
+```
+
+## ツール実行例 (Linux で ls -alh)
+```json
+{"jsonrpc":"2.0","id":"3","method":"tools/call","params":{"name":"exec","arguments":{"command":"ls", "args": "-alh"}}}
 ```
