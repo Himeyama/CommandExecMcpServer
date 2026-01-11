@@ -77,3 +77,13 @@ MCP クライアントから以下のように `exec` ツールを呼び出せ�
 ```json
 {"jsonrpc":"2.0","id":"3","method":"tools/call","params":{"name":"exec","arguments":{"command":"ls", "args": "-alh"}}}
 ```
+
+## 実行ファイルのダウンロード
+以下のファイルがダウンロード可能です。
+
+- CommandExecMcpServer.exe (Windows)
+- CommandExecMcpServer (Linux)
+
+ダウンロード手順は以下のドキュメントを参照してください。
+
+[ダウンロード方法](docs/Download.md)
